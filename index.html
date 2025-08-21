@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FutureTech Magazine</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">FutureTech</h1>
+      <ul>
+        <li><a href="#home" onclick="scrollToSection('home')">Home</a></li>
+        <li><a href="#technology" onclick="scrollToSection('technology')">Technology</a></li>
+        <li><a href="#innovation" onclick="scrollToSection('innovation')">Innovation</a></li>
+        <li><a href="#lifestyle" onclick="scrollToSection('lifestyle')">Lifestyle</a></li>
+        <li><a href="#about" onclick="scrollToSection('about')">About</a></li>
+        <li><a href="#contact" onclick="scrollToSection('contact')">Contact</a></li>
+      </ul>
+      <input type="text" id="searchBar" placeholder="Search articles...">
+    </nav>
+  </header>
+
+  <!-- Hero Section / Home -->
+  <section class="hero" id="home">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
+    <div class="hero-content">
+    <h2>Exploring the Future of Technology</h2>
+      <p>Discover cutting-edge innovations, breakthrough discoveries, and the minds shaping tomorrow's world.</p>
+      <button onclick="scrollToSection('technology')">Explore Latest Stories</button>
+    </div>
+  </section>
+
+  <!-- Scroll Indicator -->
+  <div class="scroll-indicator" id="scrollIndicator">
+    <span>Scroll to explore</span>
+    <div class="scroll-arrow"></div>
+  </div>
+
+  <!-- Section Progress Indicator -->
+  <div class="section-progress" id="sectionProgress">
+    <div class="progress-dot active" data-section="Home" onclick="scrollToSection('home')"></div>
+    <div class="progress-dot" data-section="Technology" onclick="scrollToSection('technology')"></div>
+    <div class="progress-dot" data-section="Innovation" onclick="scrollToSection('innovation')"></div>
+    <div class="progress-dot" data-section="Lifestyle" onclick="scrollToSection('lifestyle')"></div>
+    <div class="progress-dot" data-section="About" onclick="scrollToSection('about')"></div>
+    <div class="progress-dot" data-section="Contact" onclick="scrollToSection('contact')"></div>
+  </div>
+
+  <!-- Technology Section -->
+  <section class="technology section-animate" id="technology">
+    <h2>Technology</h2>
+    <div class="section-content">
+      <div class="tech-intro">
+        <h3>Cutting-Edge Innovations</h3>
+        <p>Explore the latest breakthroughs in technology that are reshaping our world.</p>
+      </div>
+      <div class="card-gallery" data-section="technology">
+        <div class="cards-container">
+          <div class="card tech-card-1" data-title="AI Revolution" onclick="openArticle('ai')" data-index="0">
+            <img src="https://media.istockphoto.com/id/1647918116/photo/ai-revolution-businessman-working-and-touching-with-augmented-virtual-reality-at-night-office.webp?a=1&b=1&s=612x612&w=0&k=20&c=ygdZnJ7m_Z2bLyEUUpLFJ52jR78-1ppGnz84F7_YUVE=" alt="AI Revolution">
+            <div class="card-content">
+              <h3>The AI Revolution</h3>
+              <p>Discover how artificial intelligence is transforming industries, from healthcare to finance, and what it means for the future of work.</p>
+            </div>
+          </div>
+          <div class="card tech-card-2" data-title="Quantum Computing" onclick="openArticle('quantum')" data-index="1">
+            <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=600&auto=format&fit=crop&q=60" alt="Quantum Computing">
+            <div class="card-content">
+              <h3>Quantum Computing</h3>
+              <p>The next frontier in computing power that will solve problems impossible for classical computers.</p>
+            </div>
+          </div>
+          <div class="card tech-card-3" data-title="5G Networks" onclick="openArticle('5g')" data-index="2">
+            <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=600&auto=format&fit=crop&q=60" alt="5G Networks">
+            <div class="card-content">
+              <h3>5G Revolution</h3>
+              <p>Ultra-fast connectivity enabling IoT, autonomous vehicles, and immersive experiences.</p>
+            </div>
+          </div>
+          <div class="card tech-card-4" data-title="Blockchain" onclick="openArticle('blockchain')" data-index="3">
+            <img src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=600&auto=format&fit=crop&q=60" alt="Blockchain">
+            <div class="card-content">
+              <h3>Blockchain Future</h3>
+              <p>Decentralized technologies revolutionizing finance, supply chains, and digital ownership.</p>
+            </div>
+          </div>
+          <div class="card tech-card-5" data-title="VR/AR" onclick="openArticle('vrar')" data-index="4">
+            <img src="https://images.unsplash.com/photo-1622979135225-d2ba269cf1ac?w=600&auto=format&fit=crop&q=60" alt="VR/AR">
+            <div class="card-content">
+              <h3>Virtual Reality</h3>
+              <p>Immersive technologies changing how we work, learn, and experience entertainment.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card-actions">
+          <button class="card-prev" data-target="technology">Prev</button>
+          <button class="card-next" data-target="technology">Next</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Innovation Section -->
+  <section class="innovation section-animate" id="innovation">
+    <h2>Innovation</h2>
+    <div class="section-content">
+      <div class="innovation-intro">
+        <h3>Tomorrow's Breakthroughs</h3>
+        <p>Witness the innovations that will define the next decade of human progress.</p>
+      </div>
+      <div class="card-gallery" data-section="innovation">
+        <div class="cards-container">
+          <div class="card innovation-card-1" data-title="Space Exploration" onclick="openArticle('space')" data-index="0">
+
+            <img src="https://images.unsplash.com/photo-1625442772842-329d4f08ea14?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8c3BhY2UlMjBleHBsb3JhdGlvbiUyMG1hZ2VzfGVufDB8fDB8fHww" alt="Space Exploration">
+            <div class="card-content">
+              <h3>Mars & Beyond</h3>
+              <p>Join us on humanity's greatest adventure as we explore the latest missions to Mars and plans for interstellar travel.</p>
+            </div>
+          </div>
+          <div class="card innovation-card-2" data-title="Green Energy" onclick="openArticle('energy')" data-index="1">
+
+            <img src="https://media.istockphoto.com/id/1214915960/photo/sunset-over-solar-energy-farm-plant.webp?a=1&b=1&s=612x612&w=0&k=20&c=Htae_MiwH43CTh6O0tilptG137pncC5JYq4P2REWT4o=" alt="Green Energy">
+            <div class="card-content">
+              <h3>Clean Energy Future</h3>
+              <p>How renewable energy technologies are revolutionizing power generation and creating a sustainable tomorrow.</p>
+            </div>
+          </div>
+          <div class="card innovation-card-3" data-title="Biotech" onclick="openArticle('biotech')" data-index="2">
+
+            <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&auto=format&fit=crop&q=60" alt="Biotechnology">
+            <div class="card-content">
+              <h3>Biotechnology Advances</h3>
+              <p>Revolutionary medical treatments and genetic engineering that will extend and enhance human life.</p>
+            </div>
+          </div>
+          <div class="card innovation-card-4" data-title="Ocean Tech" onclick="openArticle('ocean')" data-index="3">
+
+            <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&auto=format&fit=crop&q=60" alt="Ocean Technology">
+            <div class="card-content">
+              <h3>Ocean Innovation</h3>
+              <p>Exploring the depths with advanced submersibles and marine conservation technologies.</p>
+            </div>
+          </div>
+          <div class="card innovation-card-5" data-title="Smart Cities" onclick="openArticle('smartcities')" data-index="4">
+            <img src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=600&auto=format&fit=crop&q=60" alt="Smart Cities">
+            <div class="card-content">
+              <h3>Smart Cities</h3>
+              <p>Urban innovation creating sustainable, connected, and livable cities of the future.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card-actions">
+          <button class="card-prev" data-target="innovation">Prev</button>
+          <button class="card-next" data-target="innovation">Next</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lifestyle Section -->
+  <section class="lifestyle section-animate" id="lifestyle">
+    <h2>Lifestyle</h2>
+    <div class="section-content">
+      <div class="lifestyle-intro">
+        <h3>Tech-Enhanced Living</h3>
+        <p>How technology is transforming the way we live, work, and connect with each other.</p>
+      </div>
+      <div class="card-gallery" data-section="lifestyle">
+        <div class="cards-container">
+          <div class="card lifestyle-card-1" data-title="Smart Homes" onclick="openArticle('smarthome')" data-index="0">
+
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&auto=format&fit=crop&q=60" alt="Smart Home">
+            <div class="card-content">
+              <h3>Smart Home Revolution</h3>
+              <p>Transform your living space with AI-powered automation, security, and energy management systems.</p>
+            </div>
+          </div>
+          <div class="card lifestyle-card-2" data-title="Future Gadgets" onclick="openArticle('gadgets')" data-index="1">
+
+            <img src="https://media.istockphoto.com/id/1334575820/photo/business-woman-using-mobile-smartphone-on-global-network-connection-and-data-customer.webp?a=1&b=1&s=612x612&w=0&k=20&c=exzeKDLNUYiXd3bJi5wibch3oJcKy6GKQM508so1Ams=" alt="Future Gadgets">
+            <div class="card-content">
+              <h3>Next-Gen Gadgets</h3>
+              <p>Explore the cutting-edge gadgets and wearables that will redefine our daily lives in the coming decade.</p>
+            </div>
+          </div>
+          <div class="card lifestyle-card-3" data-title="Digital Wellness" onclick="openArticle('wellness')" data-index="2">
+
+            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&auto=format&fit=crop&q=60" alt="Digital Wellness">
+            <div class="card-content">
+              <h3>Digital Wellness</h3>
+              <p>Finding balance in our connected world through mindful technology use and digital detox strategies.</p>
+            </div>
+          </div>
+          <div class="card lifestyle-card-4" data-title="Remote Work" onclick="openArticle('remotework')" data-index="3">
+
+            <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600&auto=format&fit=crop&q=60" alt="Remote Work">
+            <div class="card-content">
+              <h3>Future of Work</h3>
+              <p>How remote work technologies are reshaping careers and work-life balance globally.</p>
+            </div>
+          </div>
+          <div class="card lifestyle-card-5" data-title="Health Tech" onclick="openArticle('healthtech')" data-index="4">
+
+            <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=600&auto=format&fit=crop&q=60" alt="Health Technology">
+            <div class="card-content">
+              <h3>Health Technology</h3>
+              <p>Wearable devices and health apps revolutionizing personal wellness and medical care.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card-actions">
+          <button class="card-prev" data-target="lifestyle">Prev</button>
+          <button class="card-next" data-target="lifestyle">Next</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about section-animate" id="about">
+    <h2>About FutureTech</h2>
+    <div class="section-content">
+      <div class="about-intro">
+        <h3>Pioneers of Tomorrow's Stories</h3>
+        <p>At FutureTech Magazine, we're passionate about exploring the cutting-edge innovations that are shaping our world. Our mission is to make complex technology accessible and exciting for everyone.</p>
+      </div>
+      
+      <div class="about-stats">
+        <div class="stat-item">
+          <div class="stat-number" data-target="1000000">0</div>
+          <div class="stat-label">Monthly Readers</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-target="500">0</div>
+          <div class="stat-label">Articles Published</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-target="50">0</div>
+          <div class="stat-label">Expert Contributors</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-target="15">0</div>
+          <div class="stat-label">Countries Reached</div>
+        </div>
+      </div>
+
+      <div class="team-section">
+        <h3>Meet Our Team</h3>
+        <div class="team-grid">
+          <div class="team-member">
+            <div class="member-avatar">
+              <img src="3017dca5ddec31af3b6ecc3ea28490d0.jpg" alt="Saumya Yadav">
+            </div>
+            <h4>Saumya Yadav</h4>
+            <p>Editor-in-Chief</p>
+            <div class="member-bio">Leading tech journalism for over a decade</div>
+          </div>
+          <div class="team-member">
+            <div class="member-avatar">
+              <img src="8dbbdc4f8d498a4a8f1245fa1e639215.jpg" alt="Sumaiya Khan">
+            </div>
+            <h4>Sumaiya Khan</h4>
+            <p>AI & Innovation Reporter</p>
+            <div class="member-bio">Specialized in artificial intelligence and emerging tech</div>
+          </div>
+          <div class="team-member">
+            <div class="member-avatar">
+              <img src="images.jpeg" alt="Suchita Gupta">
+            </div>
+            <h4>Suchita Gupta</h4>
+            <p>Space & Science Editor</p>
+            <div class="member-bio">Covering space exploration and scientific breakthroughs</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="newsletter-section">
+        <div class="newsletter-card">
+          <h3>🚀 Stay Updated with FutureTech</h3>
+          <p>Get the latest tech news, exclusive interviews, and breakthrough discoveries delivered to your inbox weekly.</p>
+          <form class="newsletter-form" id="newsletterForm">
+            <input type="email" placeholder="Enter your email address" required>
+            <button type="submit">Subscribe Now</button>
+          </form>
+          <div class="newsletter-benefits">
+            <div class="benefit">✨ Exclusive content</div>
+            <div class="benefit">🎯 Weekly tech insights</div>
+            <div class="benefit">📱 Mobile-friendly format</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact section-animate" id="contact">
+    <h2>Get In Touch</h2>
+    <div class="section-content">
+      <div class="contact-intro">
+        <h3>Let's Connect</h3>
+        <p>Have a story tip, partnership opportunity, or just want to say hello? We'd love to hear from you!</p>
+      </div>
+
+      <div class="contact-container">
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon">📧</div>
+            <div class="contact-details">
+              <h4>Email Us</h4>
+              <p>hello@futuretechmagazine.com</p>
+              <p>tips@futuretechmagazine.com</p>
+            </div>
+          </div>
+          
+          <div class="contact-item">
+            <div class="contact-icon">🌐</div>
+            <div class="contact-details">
+              <h4>Follow Us</h4>
+              <div class="social-links">
+                <i class="fa fa-twitter contact-social-icon" id="contact-twitter"></i>
+                <i class="fa fa-linkedin contact-social-icon" id="contact-linkedin"></i>
+                <i class="fa fa-instagram contact-social-icon" id="contact-instagram"></i>
+                <i class="fa fa-youtube contact-social-icon" id="contact-youtube"></i>
+              </div>
+            </div>
+          </div>
+          
+          <div class="contact-item">
+            <div class="contact-icon">⏰</div>
+            <div class="contact-details">
+              <h4>Response Time</h4>
+              <p>We typically respond within 24 hours</p>
+              <p>For urgent matters: within 4 hours</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-container">
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <input type="text" id="name" name="name" placeholder="Your Name" required>
+              <label for="name">Name</label>
+            </div>
+            
+            <div class="form-group">
+              <input type="email" id="email" name="email" placeholder="Your Email" required>
+              <label for="email">Email</label>
+            </div>
+            
+            <div class="form-group">
+              <select id="subject" name="subject" required>
+                <option value="">Select Topic</option>
+                <option value="story-tip">Story Tip</option>
+                <option value="partnership">Partnership</option>
+                <option value="feedback">Feedback</option>
+                <option value="press">Press Inquiry</option>
+                <option value="other">Other</option>
+              </select>
+              <label for="subject">Subject</label>
+            </div>
+            
+            <div class="form-group">
+              <textarea id="message" name="message" placeholder="Your Message" rows="6" required></textarea>
+              <label for="message">Message</label>
+            </div>
+            
+            <button type="submit" class="submit-btn">
+              <span>Send Message</span>
+              <div class="btn-particles"></div>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="testimonials-section">
+        <h3>What Our Readers Say</h3>
+        <div class="testimonials-grid">
+          <div class="testimonial">
+            <div class="testimonial-content">
+              <p>"FutureTech keeps me ahead of the curve. Their insights into AI and quantum computing are unmatched!"</p>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">
+                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&auto=format&fit=crop&q=60" alt="Emma Davis">
+              </div>
+              <div class="author-info">
+                <h5>Emma Davis</h5>
+                <p>Tech Entrepreneur</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="testimonial">
+            <div class="testimonial-content">
+              <p>"The space exploration coverage is phenomenal. I never miss an article about Mars missions!"</p>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop&q=60" alt="James Wilson">
+              </div>
+              <div class="author-info">
+                <h5>James Wilson</h5>
+                <p>Aerospace Engineer</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="testimonial">
+            <div class="testimonial-content">
+              <p>"Finally, tech news that's both accessible and deeply informative. FutureTech is my go-to source!"</p>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">
+                <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=100&auto=format&fit=crop&q=60" alt="Lisa Park">
+              </div>
+              <div class="author-info">
+                <h5>Lisa Park</h5>
+                <p>Software Developer</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>FutureTech Magazine</h4>
+        <p>Exploring tomorrow's technology today</p>
+        <div class="footer-social">
+          <i class="fa fa-twitter" id="footer-twitter"></i>
+          <i class="fa fa-linkedin" id="footer-linkedin"></i>
+          <i class="fa fa-instagram" id="footer-instagram"></i>
+          <i class="fa fa-youtube" id="footer-youtube"></i>
+        </div>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#technology">Technology</a></li>
+          <li><a href="#innovation">Innovation</a></li>
+          <li><a href="#lifestyle">Lifestyle</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Contact</h4>
+        <p>hello@futuretechmagazine.com</p>
+        <p>Follow us for daily tech updates</p>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2025 FutureTech Magazine | All Rights Reserved</p>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cookie Policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
